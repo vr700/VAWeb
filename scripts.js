@@ -62,7 +62,7 @@ function finalizarCompra() {
         return;
     }
     const mensaje = `Hola, estoy interesado en los siguientes productos:\n${carrito.map(p => `- ${p.cantidad}x ${p.nombre} - $${p.precio * p.cantidad}`).join('\n')}`;
-    const urlWhatsApp = `https://wa.me/TU_NUMERO_DE_WHATSAPP?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsApp = `https://wa.me/941766185?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, '_blank');
 }
 

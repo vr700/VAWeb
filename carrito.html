@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendetta Atic - Carrito</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -26,11 +28,16 @@
     </header>
 
     <section class="carrito">
-        <h2>Tu Carrito 🛒</h2>
+        <h2><i class="fas fa-shopping-cart"></i> Tu Carrito</h2>
         <div id="carrito-grid">
             <!-- Los productos del carrito se cargarán aquí dinámicamente -->
         </div>
-        <button id="whatsappButton">Finalizar compra por WhatsApp</button>
+        <div class="resumen-carrito">
+            <p>Total: <span id="total-carrito">$0</span></p>
+            <button id="whatsappButton" class="btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Finalizar compra
+            </button>
+        </div>
     </section>
 
     <footer>

@@ -373,3 +373,177 @@ footer {
 #whatsappButton:hover {
     background: #128c7e;
 }
+
+/* Estilos Generales */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px; /* Altura fija para el logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilos para el carrito */
+.carrito {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.carrito h2 i {
+    margin-right: 10px;
+}
+
+#carrito-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.producto-carrito img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.producto-carrito .info {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.producto-carrito h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.producto-carrito p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.producto-carrito .cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.producto-carrito .cantidad button {
+    background: #007aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.producto-carrito .eliminar {
+    background: #ff3b30;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.resumen-carrito {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    text-align: right;
+}
+
+.resumen-carrito p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-whatsapp i {
+    font-size: 20px;
+}
+
+/* Estilos responsive */
+@media (max-width: 767px) {
+    .producto-carrito {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .producto-carrito img {
+        width: 100%;
+        height: auto;
+    }
+
+    .producto-carrito .info {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .resumen-carrito {
+        text-align: center;
+    }
+}
