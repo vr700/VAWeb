@@ -28,6 +28,13 @@ function agregarAlCarrito(producto) {
     actualizarCarrito(); // Actualizar la vista del carrito
 }
 
+// Función para eliminar productos del carrito
+function eliminarDelCarrito(productoId) {
+    carrito = carrito.filter(item => item.id !== productoId);
+    guardarCarrito(); // Guardar el carrito en localStorage
+    actualizarCarrito(); // Actualizar la vista del carrito
+}
+
 // Función para actualizar la vista del carrito
 function actualizarCarrito() {
     const carritoGrid = document.getElementById('carrito-grid');
@@ -40,6 +47,7 @@ function actualizarCarrito() {
                     <h3>${producto.nombre}</h3>
                     <p>${producto.descripcion}</p>
                     <p>Precio: $${producto.precio} (${producto.cantidad}x)</p>
+                    <button class="btn-eliminar" onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
                 </div>
             `;
             carritoGrid.innerHTML += productoHTML;
@@ -54,7 +62,7 @@ function finalizarCompra() {
         return;
     }
     const mensaje = `Hola, estoy interesado en los siguientes productos:\n${carrito.map(p => `- ${p.cantidad}x ${p.nombre} - $${p.precio * p.cantidad}`).join('\n')}`;
-    const urlWhatsApp = `https://wa.me/941766185?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsApp = `https://wa.me/TU_NUMERO_DE_WHATSAPP?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, '_blank');
 }
 
