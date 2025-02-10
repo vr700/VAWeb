@@ -68,12 +68,18 @@ function finalizarCompra() {
 
 // Función para cargar detalles del producto
 function cargarDetallesProducto(producto) {
+    const imagenProducto = document.getElementById('imagen-producto');
     const nombreProducto = document.getElementById('nombre-producto');
     const descripcionProducto = document.getElementById('descripcion-producto');
     const precioProducto = document.getElementById('precio-producto');
     const btnAgregarCarrito = document.getElementById('btn-agregar-carrito');
 
-    if (nombreProducto && descripcionProducto && precioProducto && btnAgregarCarrito) {
+    if (imagenProducto && nombreProducto && descripcionProducto && precioProducto && btnAgregarCarrito) {
+        // Cargar la imagen del producto
+        imagenProducto.src = producto.imagen;
+        imagenProducto.alt = producto.nombre;
+
+        // Cargar los detalles del producto
         nombreProducto.textContent = producto.nombre;
         descripcionProducto.textContent = producto.descripcion;
         precioProducto.textContent = producto.precio;
@@ -131,6 +137,7 @@ fetch('productos.json')
         }
     })
     .catch(error => console.error('Error al cargar los productos:', error));
+
 
 // Evento para el botón de WhatsApp en la página del carrito
 document.getElementById('whatsappButton')?.addEventListener('click', finalizarCompra);
