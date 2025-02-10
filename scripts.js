@@ -43,11 +43,20 @@ function actualizarCarrito() {
         carrito.forEach(producto => {
             const productoHTML = `
                 <div class="producto-carrito">
+                
                     <img src="${producto.imagen}" alt="${producto.nombre}">
                     <h3>${producto.nombre}</h3>
                     <p>${producto.descripcion}</p>
                     <p>Precio: $${producto.precio} (${producto.cantidad}x)</p>
                     <button class="btn-eliminar" onclick="eliminarDelCarrito(${producto.id})">Eliminar</button>
+                    
+                    <button class="close-button" onclick="eliminarDelCarrito(${producto.id})"> <span class="text">CSSLab</span>
+                        <div class="icons">
+                            <div class="cross"></div>
+                            <div class="check"></div>
+                        </div>
+                    </button>
+
                 </div>
             `;
             carritoGrid.innerHTML += productoHTML;
