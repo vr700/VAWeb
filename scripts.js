@@ -1,3 +1,5 @@
+// #region Carrito
+
 // Array para almacenar los productos en el carrito
 let carrito = [];
 
@@ -73,6 +75,17 @@ function finalizarCompra() {
     window.open(urlWhatsApp, '_blank');
 }
 
+// Evento para el botón de WhatsApp en la página del carrito
+document.getElementById('whatsappButton')?.addEventListener('click', finalizarCompra);
+
+// Cargar el carrito al iniciar la página
+cargarCarrito();
+
+// #endregion
+
+
+// #region Productos
+
 // Función para cargar detalles del producto
 function cargarDetallesProducto(producto) {
     const imagenProducto = document.getElementById('imagen-producto');
@@ -145,15 +158,10 @@ fetch('productos.json')
     })
     .catch(error => console.error('Error al cargar los productos:', error));
 
-
-// Evento para el botón de WhatsApp en la página del carrito
-document.getElementById('whatsappButton')?.addEventListener('click', finalizarCompra);
-
-// Cargar el carrito al iniciar la página
-cargarCarrito();
+// #endregion
 
 
-
+// #region NavBar
 document.addEventListener("DOMContentLoaded", function () {
     function cambiarLogo() {
         let logo = document.getElementById("logo-img");
@@ -174,3 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cambia la imagen al redimensionar la ventana
     window.addEventListener("resize", cambiarLogo);
 });
+
+// #endregion
+
