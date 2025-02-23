@@ -182,7 +182,7 @@ nav {
 }
 @media (max-width: 480px) {
     .logo img {
-        height: 30px; /* Altura más pequeña para celular */
+        height: 40px; /* Altura más pequeña para celular */
     }
 }
 
