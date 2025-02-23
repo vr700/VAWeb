@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (ancho <= 480) {
             logo.src = "images/logoo (1).jpeg"; // Imagen para celular
         } else if (ancho <= 1024) {
-            logo.src = "images/logoo (1).jpeg"; // Imagen para tablet y laptop
+            logo.src = "images/logoo (4).jpeg"; // Imagen para tablet y laptop
         } else {
             logo.src = "images/logoo (4).jpeg"; // Imagen para escritorio
         }
