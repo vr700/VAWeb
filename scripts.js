@@ -151,3 +151,26 @@ document.getElementById('whatsappButton')?.addEventListener('click', finalizarCo
 
 // Cargar el carrito al iniciar la página
 cargarCarrito();
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    function cambiarLogo() {
+        let logo = document.getElementById("logo-img");
+        let ancho = window.innerWidth;
+
+        if (ancho <= 480) {
+            logo.src = "images/logoo (1).jpeg"; // Imagen para celular
+        } else if (ancho <= 1024) {
+            logo.src = "images/logoo (1).jpeg"; // Imagen para tablet y laptop
+        } else {
+            logo.src = "images/logoo (4).jpeg"; // Imagen para escritorio
+        }
+    }
+
+    // Cambia la imagen al cargar la página
+    cambiarLogo();
+
+    // Cambia la imagen al redimensionar la ventana
+    window.addEventListener("resize", cambiarLogo);
+});
