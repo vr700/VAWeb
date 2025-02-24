@@ -126,7 +126,7 @@ fetch('productos.json')
                     </a>
                     <p>${producto.descripcion}</p>
                     <p>Precio: $${producto.precio}</p>
-                    <button class="btn" onclick="agregarAlCarrito(${JSON.stringify(producto)})">Añadir al carrito</button>
+                    btnAgregarCarrito.onclick = () => agregarAlCarrito(producto);
                 </div>
             `;
 
